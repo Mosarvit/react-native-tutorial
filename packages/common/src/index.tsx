@@ -1,33 +1,33 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React, { useState } from 'react';
-import { Button, Text, View } from 'react-native';
+import React, { useContext } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Router } from "./Router";
+import { CounterStoreContext } from './stores/CounterStore';
 
 export const App = () => {
 
-  const [counter, setCounter] = useState(0);
+  const counterStore = useContext(CounterStoreContext);
 
   return (
 
-    <View  >
-
-      <Text  >{counter}</Text>
-
-      <Text  >{counter}</Text>
-
-      <Text  >{counter}</Text>
-
-      <Text  >{counter}</Text>
-      <Button title="incement" onPress={() => { setCounter(counter + 1) }} />
+    <View style={styles.container} >
+      <View style={styles.wrapper} >
+        <Router />
+      </View>
     </View>
 
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    height: '100%'
+  },
+  wrapper: {
+    width: '100%',
+    maxWidth: 425,
+    backgroundColor: "#F5FCFF"
+  }
+})
