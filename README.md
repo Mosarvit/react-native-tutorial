@@ -15,3 +15,7 @@ In `/app` run `npx react-native start`
 
 1. Start an Android emulator
 2. In `/app` run `npx react-native run-android`
+
+### Making Changes
+
+After making changes in `\common`, run `yarn build`.
