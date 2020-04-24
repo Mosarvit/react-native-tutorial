@@ -8,14 +8,20 @@ In `/app` run `npx react-native start`
 
 #### iOS:
 
-1. Start an iOS emulator
-2. In `/app` run `npx react-native run-ios`
+In `/app` run `npx react-native run-ios`
+(this should start the emulator automatically)
 
 #### Android:
 
-1. Start an Android emulator
-2. In `/app` run `npx react-native run-android`
+In `/app` run `npx react-native run-android`
+(this should start the emulator automatically)
 
-### Making Changes
+### Developing
 
 After making changes in `\common`, run `yarn build`.
+
+#### app
+
+In `app` run `wml start`
+
+
